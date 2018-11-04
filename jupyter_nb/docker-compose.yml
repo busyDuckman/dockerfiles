@@ -1,0 +1,17 @@
+version: '3.6'
+services:
+  jupyter_nb:
+      container_name: jupyter_nb
+      build:
+        dockerfile: Dockerfile
+        context: notebook/
+      restart: unless-stopped
+      network_mode: host
+      hostname: jupyter_notebook
+      volumes: 
+        - /home/duckman/Notebooks:/home/jovyan/work
+        - github:/github
+        
+volumes:
+    github:
+    # this volume is kept, so that cloning large repos is a delta operation

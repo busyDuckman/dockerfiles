@@ -1,0 +1,6 @@
+# files with my password or something
+jupyter_nb/notebook/jupyter_notebook_config.py
+
+# idea
+.idea/
+*.iml
