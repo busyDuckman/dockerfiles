@@ -5,10 +5,10 @@ WORKDIR /app
 RUN git clone https://github.com/busyDuckman/FlagGenService.git && \
     git clone https://github.com/busyDuckman/WDLibCore
 
-RUN cd FlagGenService && \
-    dotnet restore
-
+WORKDIR /app/FlagGenService
+RUN dotnet restore
 RUN RUN dotnet publish -c Release -o out
+
 # Copy csproj and restore as distinct layers
 # COPY *.csproj ./
 
