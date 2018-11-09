@@ -7,7 +7,7 @@ RUN git clone https://github.com/busyDuckman/FlagGenService.git && \
 
 WORKDIR /app/FlagGenService
 RUN dotnet restore
-RUN RUN dotnet publish -c Release -o out
+RUN dotnet publish -c Release -o out
 
 # Copy csproj and restore as distinct layers
 # COPY *.csproj ./
